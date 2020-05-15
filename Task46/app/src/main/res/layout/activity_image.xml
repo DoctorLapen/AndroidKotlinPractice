@@ -7,12 +7,11 @@
     tools:context=".MainActivity">
 
     <fragment
-        android:id="@+id/listFragment"
-        android:name="com.lapin.task46.MyListFragment"
+        android:id="@+id/ImageViewer"
+        android:name="com.lapin.task46.ImageViewerFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        tools:layout="@android:layout/list_content">
+        android:layout_weight="1">
     </fragment>
 
 

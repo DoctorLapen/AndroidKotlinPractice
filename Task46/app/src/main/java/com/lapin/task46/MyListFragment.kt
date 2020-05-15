@@ -1,6 +1,8 @@
 package com.lapin.task46
 
 
+
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,10 +10,9 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.AdapterView.OnItemClickListener
 import android.widget.ArrayAdapter
-import android.widget.Toast
 import androidx.fragment.app.ListFragment
 
-
+val keyName = "selectedValue"
 class MyListFragment : ListFragment(),
     OnItemClickListener {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
@@ -30,6 +31,10 @@ class MyListFragment : ListFragment(),
     }
 
     override fun onItemClick(parent: AdapterView<*>?, view: View, position: Int, id: Long) {
-        Toast.makeText(activity, "Item: $position", Toast.LENGTH_SHORT).show()
+        val item = listAdapter!!.getItem(position) as String
+        val intent = Intent(activity!!.applicationContext, ImageActivity::class.java)
+
+        intent.putExtra(keyName, item)
+        startActivity(intent)
     }
 }

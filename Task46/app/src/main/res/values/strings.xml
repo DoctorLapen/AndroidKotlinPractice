@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Task 4.6</string>
+    <string-array name="Planets">
+        <item>Наруто</item>
+        <item>Наначі</item>
+        <item>Ліліт</item>
+
+    </string-array>
+</resources>

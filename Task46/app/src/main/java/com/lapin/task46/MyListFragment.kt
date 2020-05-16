@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.AdapterView.OnItemClickListener
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import androidx.fragment.app.ListFragment
 
 
@@ -50,6 +51,7 @@ class MyListFragment : ListFragment(), OnItemClickListener {
             R.array.Planets,android.R.layout.simple_list_item_1)
         listAdapter = adapter
         listView.onItemClickListener = this
+        getActivity()!!.findViewById<TextView>(R.id.textView2).text = Stamp.printTimeStamp("Lapin Kostiantyn");
     }
 
     override fun onItemClick(parent: AdapterView<*>?, view: View, position: Int, id: Long) {
